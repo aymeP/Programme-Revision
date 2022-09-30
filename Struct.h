@@ -1,7 +1,7 @@
 #ifndef STRUCT_H_INCLUDED
 #define STRUCT_H_INCLUDED
 
-#define long_mot 45
+#include "Parametres.h"
 
 typedef struct mot{
     char Fr[long_mot];

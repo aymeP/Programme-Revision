@@ -50,3 +50,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+Revision.cbp
+Revision.depend
+Revision.layout
+.vscode/tasks.json
