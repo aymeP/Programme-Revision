@@ -19,9 +19,9 @@ void lire(char *chaine, int longueur){
     char *positionEntree = NULL;
 
     if (fgets(chaine, longueur, stdin) != NULL) {
-        positionEntree = strchr(chaine, '\n'); // On recherchel'"Entrée"
-        if (positionEntree != NULL){// Si on a trouvé le retour àla ligne
-            *positionEntree = '\0'; // On remplace ce caractère par\0
+        positionEntree = strchr(chaine, '\n'); // On recherchel'"Entrï¿½e"
+        if (positionEntree != NULL){// Si on a trouvï¿½ le retour ï¿½la ligne
+            *positionEntree = '\0'; // On remplace ce caractï¿½re par\0
         }else{
             viderBuffer();
         }
@@ -37,9 +37,9 @@ lire(nombreTexte, 100);
 
 char *positionVirg = NULL;
 
-    positionVirg = strchr(nombreTexte, ','); // On recherchel'"Entrée"
-    if (positionVirg != NULL){// Si on a trouvé le retour àla ligne
-        *positionVirg = '.'; // On remplace ce caractère par\0
+    positionVirg = strchr(nombreTexte, ','); // On recherchel'"Entrï¿½e"
+    if (positionVirg != NULL){// Si on a trouvï¿½ le retour ï¿½la ligne
+        *positionVirg = '.'; // On remplace ce caractï¿½re par\0
     }
 
     return strtod(nombreTexte, NULL);
@@ -67,35 +67,30 @@ int lireEntier(int borneInf,int borneSup){
 }
 
 int entier(char car){
-    if(car=='0'){
-        return 0;
+    switch(car){
+        case '0':
+            return 0;
+        case '1':
+            return 1;
+        case '2':
+            return 2;
+        case '3':
+            return 3;
+        case '4':
+            return 4;
+        case '5':
+            return 5;
+        case '6':
+            return 6;
+        case '7':
+            return 7;
+        case '8':
+            return 8;
+        default:
+            return 9;
     }
-    if(car=='1'){
-        return 1;
-    }
-    if(car=='2'){
-        return 2;
-    }
-    if(car=='3'){
-        return 3;
-    }
-    if(car=='4'){
-        return 4;
-    }
-    if(car=='5'){
-        return 5;
-    }
-    if(car=='6'){
-        return 6;
-    }
-    if(car=='7'){
-        return 7;
-    }
-    if(car=='8'){
-        return 8;
-    }
-    return 9;
 }
+    
 
 int lireChiffre(int borneInf,int borneSup){
     int valid=entier(getche());
